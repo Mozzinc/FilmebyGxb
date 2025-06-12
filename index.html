@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>filmebyGXB</title>
+  <link rel="stylesheet" href="src/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <!-- Faixa animada no topo -->
+    <div class="decor-line"></div>
+  
+    <!-- Navbar principal -->
+    <nav class="navbar">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo">
+        filmeby <span class="logo-glitch">GXB</span>
+      </a>
+    
+      <!-- Botão hambúrguer -->
+      <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
+        ☰
+      </button>
+    
+      <!-- Menu de navegação -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#teaser-portfolio">Teaser</a></li>
+        <li><a href="#final-trigger">Último frame</a></li>
+        <li><a href="#contato" class="btn-contato">Contato</a></li>
+      </ul>
+    
+      <!-- Ícones sociais (escondidos em mobile) -->
+      <div class="social-icons">
+        <a href="https://instagram.com/filmebygxb" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:contatogabriel@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </nav>
+  </header>
+  
+      
+
+  <!-- HERO -->
+  <section class="hero story-frame" id="hero">
+    <div class="hero-grid">
+      <div class="hero-background-texts">
+        <span class="bg-text" style="top: 12%; left: 8%;">intensidade</span>
+        <span class="bg-text" style="top: 28%; right: 10%;">detalhe</span>
+        <span class="bg-text" style="bottom: 15%; left: 20%;">textura</span>
+        <span class="bg-text" style="top: 55%; left: 50%;">tempo</span>
+        <span class="bg-text" style="bottom: 12%; right: 15%;">real</span>
+        <span class="bg-text" style="top: 40%; left: 10%;">retrô</span>
+        <span class="bg-text" style="bottom: 30%; right: 25%;">memória</span>
+        <span class="bg-text" style="top: 70%; left: 60%;">cena</span>
+        <span class="bg-text" style="top: 20%; left: 35%;">sentir</span>
+        <span class="bg-text" style="bottom: 25%; left: 45%;">luz</span>
+      </div>
+      
+      
+      <!-- LADO ESQUERDO: Nome + frases dinâmicas -->
+      <div class="hero-left">
+        <h1 class="hero-name">
+          filmeby <span class="hero-gxb">GXB</span>
+        </h1>
+        
+        <p class="hero-dynamic" id="hero-dynamic">direção & vídeo</p>
+        <div class="hero-socials">
+          <a href="https://instagram.com/filmebygxb" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:contatogabriel@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+  
+      <!-- LADO DIREITO: Texto autoral -->
+      <div class="hero-right">
+        <p class="hero-poetry">Histórias reais, sentimentos eternos.</p>
+        <p class="hero-line">GXB transforma momentos em filmes com alma — recortes sinceros, estéticos e sem pose.</p>
+        <p class="hero-line">Entre ruídos analógicos e beats internos, ele cria narrativas visuais que batem onde faz sentido.</p>
+        <p class="hero-line">É sobre sentimento. É sobre deixar algo.</p>
+        <button class="hero-cta" onclick="scrollToSection('sobre')">Conheça a fundo o GXB</button>
+ 
+
+
+      </div>
+  
+    </div>
+  
+    <!-- Scroll -->
+    <button class="scroll-down" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })">↓</button>
+  </section>
+  
+
+
+
+
+<!-- SOBRE -->
+<section class="about fade-in story-frame" id="sobre">
+
+    <div class="about-content">
+      <div class="about-text">
+        <h2>sobre gabriel</h2>
+        <p class="about-block">21 anos, de Marília - SP</p>
+        <p class="about-block">fotógrafo, videomaker, editor</p>
+        <p class="about-block">apaixonado por <span class="highlight">filmes</span>, <span class="highlight">séries</span> e <span class="highlight">rap brasileiro</span></p>
+        <p class="about-block">inspirado por <span class="highlight">Djavan</span>, <span class="highlight">Milton</span> e o alternativo</p>
+        <p class="about-signature">filmado, dirigido, editado e sonhado por <strong>gab souza</strong></p>
+      </div>
+      <div class="about-next">
+        <button class="about-btn" onclick="scrollToSection('teaser-portfolio')">ver teaser ↓</button>
+
+      </div>
+      
+      <div class="about-image">
+        <img src="src/img/about-gabriel.jpg" alt="Gabriel Souza" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="teaser-portfolio" class="teaser-portfolio fade-in story-frame">
+
+    <video id="teaserVideo" muted loop playsinline preload="auto" class="teaser-bg">
+      <source src="midia/teaser-gxb.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+    
+    
+    
+  
+    <div class="teaser-overlay">
+      <h2 class="teaser-phrase">O sentimento está nos detalhes.</h2>
+      <a href="https://linktr.ee/filmebygxb" target="_blank" class="teaser-btn">
+        Veja mais histórias →
+      </a>
+    </div>
+  </section>
+  
+  
+  
+  
+
+  <section class="transition-section fade-in story-frame">
+    <div class="transition-inner">
+      <p class="transition-label">calma.</p>
+      <h2 class="transition-main">ainda tem mais um frame guardado.</h2>
+      <p class="transition-sub">
+        da cozinha ao altar, tudo é cinema.<br />
+        e você está prestes a ver isso.
+      </p>
+    </div>
+  </section>
+
+<!-- BOTÃO para revelar o vídeo -->
+<div class="video-trigger-wrapper" id="final-trigger">
+  <button class="video-trigger" onclick="revealFinalVideo()"> Revelar🌀 →</button>
+</div>
+
+
+<section id="final-video" class="final-video-section hidden story-frame">
+  <div class="video-wrapper" id="final-trigger">
+    <video autoplay muted loop playsinline class="final-video">
+      <source src="midia/video-restaurante.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+
+    
+    <button onclick="hideFinalVideo()" class="hide-frame-btn">esconder frame ⤴</button>
+  </div>
+</section>
+
+
+  
+  
+  
+
+ 
+  
+
+
+
+<!-- FINAL CALL -->
+<footer class="final-footer story-frame" id="contato">
+  <div class="footer-content">
+    
+    <!-- LADO ESQUERDO -->
+    <div class="footer-left">
+      <h2 class="footer-title">vamos criar algo?</h2>
+      <p class="footer-subtitle">trampo, feats ou ideias — manda aí.</p>
+    </div>
+
+    <!-- CENTRO: Ícones -->
+    <div class="footer-icons">
+      <a href="https://wa.me/+5514997015124" target="_blank" aria-label="WhatsApp">
+        <img src="src/icons/whatsapp.svg" alt="WhatsApp" />
+        <span>WhatsApp</span>
+      </a>
+      <a href="https://instagram.com/filmebygxb" target="_blank" aria-label="Instagram">
+        <img src="src/icons/instagram.svg" alt="Instagram" />
+        <span>Instagram</span>
+      </a>
+      <a href="mailto:gxbsouza@icloud.com" aria-label="E-mail">
+        <img src="src/icons/email.svg" alt="E-mail" />
+        <span>E-mail</span>
+      </a>
+      <a href="https://linktr.ee/filmebygxb" target="_blank" aria-label="Linktree">
+        <img src="src/icons/linktree.svg" alt="Linktree" />
+        <span>Linktree</span>
+      </a>
+    </div>
+
+    <!-- LADO DIREITO -->
+    <div class="footer-right">
+      <p class="footer-brand">filmebyGXB®</p>
+      <p class="footer-phrase">feito com criatividade, paixão e intensidade.</p>
+      <p class="footer-tagline">feito por quem acredita que toda memória merece um frame.</p>
+    </div>
+  </div>
+
+  <!-- CENTRALIZADO: Direitos -->
+  <div class="footer-copy-wrapper">
+    <p class="footer-copy">© 2025 Gabriel Souza. todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+  
+
+  <script>
+    // Scroll para o topo ao carregar
+    
+      // Zera scroll ao sair da página (sem travar scroll suave)
+     
+    
+    
+    
+  
+    // Frases do Hero
+    const phrases = ["criativo", "intenso", "autêntico", "real", "inspirador", "disruptivo"];
+    const el = document.getElementById("hero-dynamic");
+    let i = 1;
+  
+    setInterval(() => {
+      el.classList.add("fade-out");
+      setTimeout(() => {
+        el.textContent = phrases[i];
+        el.classList.remove("fade-out");
+        i = (i + 1) % phrases.length;
+      }, 400);
+    }, 3000);
+  
+    // Autoplay vídeo teaser quando visível
+    const video = document.getElementById("teaserVideo");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && video.paused) {
+            video.play().catch((e) => {
+              console.warn("Vídeo não pôde iniciar automaticamente:", e);
+            });
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+    observer.observe(video);
+    // Animações de entrada suaves
+const fadeEls = document.querySelectorAll('.fade-in');
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.3 });
+
+fadeEls.forEach(el => fadeObserver.observe(el));
+
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+
+function scrollToSection(id) {
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// Animação de aparição dos itens da linha do tempo
+const timelineItems = document.querySelectorAll(".timeline-list li");
+const timelineObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.5 });
+
+timelineItems.forEach(item => timelineObserver.observe(item));
+
+function revealFinalVideo() {
+  const section = document.getElementById("final-video");
+  section.classList.remove("hidden");
+  section.scrollIntoView({ behavior: "smooth" });
+
+  const video = section.querySelector("video");
+  video.play().catch(err => console.warn("Erro ao dar play:", err));
+
+  document.querySelector(".video-trigger-wrapper").style.display = "none";
+}
+
+// Botão para ocultar vídeo final
+const hideBtn = document.getElementById('hideFrameBtn');
+const finalVideo = document.getElementById('video-restaurante');
+
+hideBtn.addEventListener('click', () => {
+  finalVideo.classList.add('video-hidden');
+  hideBtn.style.display = 'none'; // Oculta o botão também
+});
+
+function revealFinalVideo() {
+  document.getElementById('final-video').classList.remove('hidden');
+  document.getElementById('final-video').scrollIntoView({ behavior: 'smooth' });
+}
+
+function hideFinalVideo() {
+  document.getElementById('final-video').classList.add('hidden');
+}
+
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("active");
+}
+
+  </script>
+  
+  
+  
+  
+  
+    
+</body>
+</html>
