@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,32 +8,24 @@
 </head>
 <body>
   <header class="site-header">
-    <!-- Faixa animada no topo -->
     <div class="decor-line"></div>
-  
-    <!-- Navbar principal -->
     <nav class="navbar">
-      <!-- Logo -->
       <a href="#hero" class="nav-logo">
         filmeby <span class="logo-glitch">GXB</span>
       </a>
-    
-      <!-- Botão hambúrguer -->
-      <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">
-        ☰
-      </button>
-    
-      <!-- Menu de navegação -->
+
+      <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#teaser-portfolio">Teaser</a></li>
-        <li><a href="#final-trigger">Último frame</a></li>
-        <li><a href="#contato" class="btn-contato">Contato</a></li>
+        <li><a href="#hero" class="i18n" data-pt="Início" data-en="Home">Início</a></li>
+        <li><a href="#sobre" class="i18n" data-pt="Sobre" data-en="About">Sobre</a></li>
+        <li><a href="#teaser-portfolio" class="i18n" data-pt="Teaser" data-en="Teaser">Teaser</a></li>
+        <li><a href="#final-trigger" class="i18n" data-pt="Último frame" data-en="Final frame">Último frame</a></li>
+        <li><a href="#contato" class="btn-contato i18n" data-pt="Contato" data-en="Contact">Contato</a></li>
       </ul>
-    
-      <!-- Ícones sociais (escondidos em mobile) -->
+
       <div class="social-icons">
+        <button id="lang-toggle" class="lang-btn" aria-label="Trocar idioma">EN</button>
         <a href="https://instagram.com/filmebygxb" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="mailto:contatogabriel@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -43,124 +35,156 @@
   
       
 
-  <!-- HERO -->
-  <section class="hero story-frame" id="hero">
-    <div class="hero-grid">
-      <div class="hero-background-texts">
-        <span class="bg-text" style="top: 12%; left: 8%;">intensidade</span>
-        <span class="bg-text" style="top: 28%; right: 10%;">detalhe</span>
-        <span class="bg-text" style="bottom: 15%; left: 20%;">textura</span>
-        <span class="bg-text" style="top: 55%; left: 50%;">tempo</span>
-        <span class="bg-text" style="bottom: 12%; right: 15%;">real</span>
-        <span class="bg-text" style="top: 40%; left: 10%;">retrô</span>
-        <span class="bg-text" style="bottom: 30%; right: 25%;">memória</span>
-        <span class="bg-text" style="top: 70%; left: 60%;">cena</span>
-        <span class="bg-text" style="top: 20%; left: 35%;">sentir</span>
-        <span class="bg-text" style="bottom: 25%; left: 45%;">luz</span>
-      </div>
-      
-      
-      <!-- LADO ESQUERDO: Nome + frases dinâmicas -->
-      <div class="hero-left">
-        <h1 class="hero-name">
-          filmeby <span class="hero-gxb">GXB</span>
-        </h1>
-        
-        <p class="hero-dynamic" id="hero-dynamic">direção & vídeo</p>
-        <div class="hero-socials">
-          <a href="https://instagram.com/filmebygxb" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
-          <a href="mailto:contatogabriel@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-  
-      <!-- LADO DIREITO: Texto autoral -->
-      <div class="hero-right">
-        <p class="hero-poetry">Histórias reais, sentimentos eternos.</p>
-        <p class="hero-line">GXB transforma momentos em filmes com alma — recortes sinceros, estéticos e sem pose.</p>
-        <p class="hero-line">Entre ruídos analógicos e beats internos, ele cria narrativas visuais que batem onde faz sentido.</p>
-        <p class="hero-line">É sobre sentimento. É sobre deixar algo.</p>
-        <button class="hero-cta" onclick="scrollToSection('sobre')">Conheça a fundo o GXB</button>
- 
-
-
-      </div>
-  
+ <!-- HERO -->
+<section class="hero story-frame" id="hero">
+  <div class="hero-grid">
+    <div class="hero-background-texts">
+      <span class="bg-text i18n" style="top: 12%; left: 8%;" data-pt="intensidade" data-en="intensity">intensidade</span>
+      <span class="bg-text i18n" style="top: 28%; right: 10%;" data-pt="detalhe" data-en="detail">detalhe</span>
+      <span class="bg-text i18n" style="bottom: 15%; left: 20%;" data-pt="textura" data-en="texture">textura</span>
+      <span class="bg-text i18n" style="top: 55%; left: 50%;" data-pt="tempo" data-en="time">tempo</span>
+      <span class="bg-text i18n" style="bottom: 12%; right: 15%;" data-pt="real" data-en="real">real</span>
+      <span class="bg-text i18n" style="top: 40%; left: 10%;" data-pt="retrô" data-en="retro">retrô</span>
+      <span class="bg-text i18n" style="bottom: 30%; right: 25%;" data-pt="memória" data-en="memory">memória</span>
+      <span class="bg-text i18n" style="top: 70%; left: 60%;" data-pt="cena" data-en="scene">cena</span>
+      <span class="bg-text i18n" style="top: 20%; left: 35%;" data-pt="sentir" data-en="feel">sentir</span>
+      <span class="bg-text i18n" style="bottom: 25%; left: 45%;" data-pt="luz" data-en="light">luz</span>
     </div>
-  
-    <!-- Scroll -->
-    <button class="scroll-down" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })">↓</button>
-  </section>
-  
+
+    <!-- LADO ESQUERDO -->
+    <div class="hero-left">
+      <h1 class="hero-name">
+        filmeby <span class="hero-gxb">GXB</span>
+      </h1>
+
+      <p class="hero-dynamic i18n" id="hero-dynamic" data-pt="direção & vídeo" data-en="direction & video">direção & vídeo</p>
+
+      <div class="hero-socials">
+        <a href="https://instagram.com/filmebygxb" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:contatogabriel@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO -->
+    <div class="hero-right">
+      <p class="hero-poetry i18n" data-pt="Histórias reais, sentimentos eternos." data-en="Real stories, eternal feelings.">Histórias reais, sentimentos eternos.</p>
+      <p class="hero-line i18n" data-pt="GXB transforma momentos em filmes com alma — recortes sinceros, estéticos e sem pose." data-en="GXB turns moments into soulful films — sincere, aesthetic and unposed frames.">GXB transforma momentos em filmes com alma — recortes sinceros, estéticos e sem pose.</p>
+      <p class="hero-line i18n" data-pt="Entre ruídos analógicos e beats internos, ele cria narrativas visuais que batem onde faz sentido." data-en="Between analog noise and inner beats, he crafts visual stories that hit where they matter.">Entre ruídos analógicos e beats internos, ele cria narrativas visuais que batem onde faz sentido.</p>
+      <p class="hero-line i18n" data-pt="É sobre sentimento. É sobre deixar algo." data-en="It's about feeling. It's about leaving something behind.">É sobre sentimento. É sobre deixar algo.</p>
+      <button class="hero-cta i18n" onclick="scrollToSection('sobre')" data-pt="Conheça a fundo o GXB" data-en="Get to know GXB">Conheça a fundo o GXB</button>
+    </div>
+  </div>
+
+  <!-- Scroll -->
+  <button class="scroll-down" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })">↓</button>
+</section>
 
 
 
 
 <!-- SOBRE -->
 <section class="about fade-in story-frame" id="sobre">
-
-    <div class="about-content">
-      <div class="about-text">
-        <h2>sobre gabriel</h2>
-        <p class="about-block">21 anos, de Marília - SP</p>
-        <p class="about-block">fotógrafo, videomaker, editor</p>
-        <p class="about-block">apaixonado por <span class="highlight">filmes</span>, <span class="highlight">séries</span> e <span class="highlight">rap brasileiro</span></p>
-        <p class="about-block">inspirado por <span class="highlight">Djavan</span>, <span class="highlight">Milton</span> e o alternativo</p>
-        <p class="about-signature">filmado, dirigido, editado e sonhado por <strong>gab souza</strong></p>
-      </div>
-      <div class="about-next">
-        <button class="about-btn" onclick="scrollToSection('teaser-portfolio')">ver teaser ↓</button>
-
-      </div>
-      
-      <div class="about-image">
-        <img src="src/img/about-gabriel.jpg" alt="Gabriel Souza" />
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-  <section id="teaser-portfolio" class="teaser-portfolio fade-in story-frame">
-
-    <video id="teaserVideo" muted loop playsinline preload="auto" class="teaser-bg">
-      <source src="midia/teaser-gxb.mp4" type="video/mp4" />
-      Seu navegador não suporta vídeo.
-    </video>
+  <div class="about-content">
     
-    
-    
-  
-    <div class="teaser-overlay">
-      <h2 class="teaser-phrase">O sentimento está nos detalhes.</h2>
-      <a href="https://linktr.ee/filmebygxb" target="_blank" class="teaser-btn">
-        Veja mais histórias →
-      </a>
-    </div>
-  </section>
-  
-  
-  
-  
-
-  <section class="transition-section fade-in story-frame">
-    <div class="transition-inner">
-      <p class="transition-label">calma.</p>
-      <h2 class="transition-main">ainda tem mais um frame guardado.</h2>
-      <p class="transition-sub">
-        da cozinha ao altar, tudo é cinema.<br />
-        e você está prestes a ver isso.
+    <div class="about-text">
+      <h2 class="i18n" data-pt="sobre gabriel" data-en="about gabriel">sobre gabriel</h2>
+      <p class="about-block i18n" data-pt="21 anos, de Marília - SP" data-en="21 years old, from Marília - SP">21 anos, de Marília - SP</p>
+      <p class="about-block i18n" data-pt="fotógrafo, videomaker, editor" data-en="photographer, filmmaker, editor">fotógrafo, videomaker, editor</p>
+      <p class="about-block i18n" 
+         data-pt="apaixonado por <span class='highlight'>filmes</span>, <span class='highlight'>séries</span> e <span class='highlight'>rap brasileiro</span>" 
+         data-en="passionate about <span class='highlight'>films</span>, <span class='highlight'>series</span> and <span class='highlight'>Brazilian rap</span>">
+        apaixonado por <span class="highlight">filmes</span>, <span class="highlight">séries</span> e <span class="highlight">rap brasileiro</span>
+      </p>
+      <p class="about-block i18n" 
+         data-pt="inspirado por <span class='highlight'>Djavan</span>, <span class='highlight'>Milton</span> e o alternativo" 
+         data-en="inspired by <span class='highlight'>Djavan</span>, <span class='highlight'>Milton</span> and the alternative">
+        inspirado por <span class="highlight">Djavan</span>, <span class="highlight">Milton</span> e o alternativo
+      </p>
+      <p class="about-signature i18n" 
+         data-pt="filmado, dirigido, editado e sonhado por <strong>gab souza</strong>" 
+         data-en="filmed, directed, edited and dreamed by <strong>gab souza</strong>">
+        filmado, dirigido, editado e sonhado por <strong>gab souza</strong>
       </p>
     </div>
-  </section>
+
+    <div class="about-next">
+      <button class="about-btn i18n" 
+              onclick="scrollToSection('teaser-portfolio')" 
+              data-pt="ver teaser ↓" 
+              data-en="see teaser ↓">
+        ver teaser ↓
+      </button>
+    </div>
+
+    <div class="about-image">
+      <img src="src/img/about-gabriel.jpg" alt="Gabriel Souza" />
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+
+<section id="teaser-portfolio" class="teaser-portfolio fade-in story-frame">
+
+  <video id="teaserVideo" muted loop playsinline preload="auto" class="teaser-bg">
+    <source src="midia/teaser-gxb.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <div class="teaser-overlay">
+    <h2 class="teaser-phrase i18n" 
+        data-pt="O sentimento está nos detalhes." 
+        data-en="The feeling is in the details.">
+      O sentimento está nos detalhes.
+    </h2>
+    <a href="https://linktr.ee/filmebygxb" 
+       target="_blank" 
+       class="teaser-btn i18n" 
+       data-pt="Veja mais histórias →" 
+       data-en="See more stories →">
+      Veja mais histórias →
+    </a>
+  </div>
+</section>
+  
+  
+  
+  
+
+<section class="transition-section fade-in story-frame">
+  <div class="transition-inner">
+    <p class="transition-label i18n" 
+       data-pt="calma." 
+       data-en="breathe.">calma.</p>
+
+    <h2 class="transition-main i18n" 
+        data-pt="ainda tem mais um frame guardado." 
+        data-en="there's still one more frame left.">
+      ainda tem mais um frame guardado.
+    </h2>
+
+    <p class="transition-sub i18n" 
+       data-pt="da cozinha ao altar, tudo é cinema.<br />e você está prestes a ver isso." 
+       data-en="from the kitchen to the altar, everything is cinema.<br />and you're about to see it.">
+      da cozinha ao altar, tudo é cinema.<br />
+      e você está prestes a ver isso.
+    </p>
+  </div>
+</section>
 
 <!-- BOTÃO para revelar o vídeo -->
 <div class="video-trigger-wrapper" id="final-trigger">
-  <button class="video-trigger" onclick="revealFinalVideo()"> Revelar🌀 →</button>
+  <button class="video-trigger i18n"
+          data-pt="Revelar🌀 →"
+          data-en="Reveal🌀 →"
+          onclick="revealFinalVideo()">
+    Revelar🌀 →
+  </button>
 </div>
-
 
 <section id="final-video" class="final-video-section hidden story-frame">
   <div class="video-wrapper" id="final-trigger">
@@ -169,8 +193,12 @@
       Seu navegador não suporta vídeo.
     </video>
 
-    
-    <button onclick="hideFinalVideo()" class="hide-frame-btn">esconder frame ⤴</button>
+    <button class="hide-frame-btn i18n"
+            data-pt="esconder frame ⤴"
+            data-en="hide frame ⤴"
+            onclick="hideFinalVideo()">
+      esconder frame ⤴
+    </button>
   </div>
 </section>
 
@@ -187,11 +215,11 @@
 <!-- FINAL CALL -->
 <footer class="final-footer story-frame" id="contato">
   <div class="footer-content">
-    
+
     <!-- LADO ESQUERDO -->
     <div class="footer-left">
-      <h2 class="footer-title">vamos criar algo?</h2>
-      <p class="footer-subtitle">trampo, feats ou ideias — manda aí.</p>
+      <h2 class="footer-title i18n" data-pt="vamos criar algo?" data-en="let's create something?">vamos criar algo?</h2>
+      <p class="footer-subtitle i18n" data-pt="trampo, feats ou ideias — manda aí." data-en="projects, collabs or ideas — hit me up.">trampo, feats ou ideias — manda aí.</p>
     </div>
 
     <!-- CENTRO: Ícones -->
@@ -217,14 +245,14 @@
     <!-- LADO DIREITO -->
     <div class="footer-right">
       <p class="footer-brand">filmebyGXB®</p>
-      <p class="footer-phrase">feito com criatividade, paixão e intensidade.</p>
-      <p class="footer-tagline">feito por quem acredita que toda memória merece um frame.</p>
+      <p class="footer-phrase i18n" data-pt="feito com criatividade, paixão e intensidade." data-en="made with creativity, passion and intensity.">feito com criatividade, paixão e intensidade.</p>
+      <p class="footer-tagline i18n" data-pt="feito por quem acredita que toda memória merece um frame." data-en="made by those who believe every memory deserves a frame.">feito por quem acredita que toda memória merece um frame.</p>
     </div>
   </div>
 
   <!-- CENTRALIZADO: Direitos -->
   <div class="footer-copy-wrapper">
-    <p class="footer-copy">© 2025 Gabriel Souza. todos os direitos reservados.</p>
+    <p class="footer-copy i18n" data-pt="© 2025 Gabriel Souza. todos os direitos reservados." data-en="© 2025 Gabriel Souza. all rights reserved.">© 2025 Gabriel Souza. todos os direitos reservados.</p>
   </div>
 </footer>
 
@@ -337,9 +365,56 @@ function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("active");
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const langToggle = document.getElementById('lang-toggle');
+
+  if (!langToggle) return;
+
+  langToggle.addEventListener('click', () => {
+    const nextLang = currentLang === 'pt' ? 'en' : 'pt';
+  
+    document.documentElement.setAttribute('lang', nextLang);
+    langToggle.textContent = nextLang === 'pt' ? 'EN' : 'PT';
+  
+    const elements = document.querySelectorAll('.i18n');
+    elements.forEach(el => {
+      const newText = el.getAttribute(`data-${nextLang}`);
+      if (newText) el.innerHTML = newText;
+    });
+  
+    // Atualiza a variável global
+    currentLang = nextLang;
+  });
+});
   </script>
   
   
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const langToggle = document.getElementById('lang-toggle');
+      if (!langToggle) return;
+    
+      // Idioma atual com base no atributo do HTML
+      let currentLang = document.documentElement.getAttribute('lang') || 'pt';
+    
+      // Ajusta o botão inicialmente
+      langToggle.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+    
+      langToggle.addEventListener('click', () => {
+        const nextLang = currentLang === 'pt' ? 'en' : 'pt';
+        currentLang = nextLang;
+    
+        document.documentElement.setAttribute('lang', nextLang);
+        langToggle.textContent = nextLang === 'pt' ? 'EN' : 'PT';
+    
+        const elements = document.querySelectorAll('.i18n');
+        elements.forEach(el => {
+          const newText = el.getAttribute(`data-${nextLang}`);
+          if (newText) el.innerHTML = newText;
+        });
+      });
+    });
+    </script>
   
   
   
