@@ -1628,3 +1628,219 @@ h2, .hero-poetry, .teaser-phrase, .contact-title {
 
 
 
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 0;
+    gap: 0.8rem;
+  }
+
+  .nav-menu a,
+  .btn-contato {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+
+  .btn-contato {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .social-icons {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .lang-btn {
+    align-self: flex-start;
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .footer-icons {
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-icons a {
+    font-size: 0.75rem;
+  }
+
+  .footer-icons img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.2rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-subtitle,
+  .footer-phrase,
+  .footer-tagline {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .footer-copy-wrapper {
+    margin-top: 1.5rem;
+  }
+}
+
+
+/* Esconde menu padrão no mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0e0e0e;
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    z-index: 999;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #9b78d0;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .nav-menu a {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+
+/* Mobile dropdown nav */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* abaixo do header */
+  right: 20px;
+  background-color: rgba(17, 17, 17, 0.95);
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 1rem;
+  z-index: 999;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease forwards;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Esconde menu em telas maiores */
+@media(min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+
+/* Menu retrátil (mobile) */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 16px;
+  background-color: rgba(17, 17, 17, 0.95);
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 1rem;
+  min-width: 180px;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease forwards;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+
+/* Animação suave */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botão hambúrguer */
+.hamburger {
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Esconde menu retrátil em telas grandes */
+@media(min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+}

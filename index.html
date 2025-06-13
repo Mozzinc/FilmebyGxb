@@ -14,7 +14,9 @@
         filmeby <span class="logo-glitch">GXB</span>
       </a>
 
-      <button class="hamburger" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+      <button class="hamburger" id="menuToggle" aria-label="Abrir menu">
+        ☰
+      </button>
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#hero" class="i18n" data-pt="Início" data-en="Home">Início</a></li>
@@ -386,6 +388,9 @@ document.addEventListener('DOMContentLoaded', () => {
     currentLang = nextLang;
   });
 });
+
+
+
   </script>
   
   
@@ -414,6 +419,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+
+
+
+
+
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleBtn = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+      
+        toggleBtn.addEventListener("click", () => {
+          navMenu.classList.toggle("show");
+      
+          // Alterna ícone ☰ ↔ ✕
+          toggleBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+        });
+      
+        // Fecha menu ao clicar em algum link (em mobile)
+        document.querySelectorAll("#navMenu a").forEach(link => {
+          link.addEventListener("click", () => {
+            if (navMenu.classList.contains("show")) {
+              navMenu.classList.remove("show");
+              toggleBtn.textContent = "☰";
+            }
+          });
+        });
+      });
     </script>
   
   
