@@ -1855,3 +1855,168 @@ h2, .hero-poetry, .teaser-phrase, .contact-title {
   border-radius: 8px;
   display: block;
 }
+
+body {
+  cursor: url('src/icons/cursor.svg'), auto;
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: start;
+}
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+.carousel-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #b6f398;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.swiper-slide {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  max-height: unset;
+}
+
+.ref-desc {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin-top: 1rem;
+  line-height: 1.4;
+  max-width: 90%;
+  text-align: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #c0ff8f; /* tom verde-claro da identidade */
+  filter: drop-shadow(0 0 5px rgba(192, 255, 143, 0.4));
+}
+
+.swiper-pagination-bullet {
+  background-color: #666;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c0ff8f;
+  opacity: 1;
+}
+
+.visual-carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  position: relative;
+}
+
+
+.visual-card {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 320px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+
+.visual-card:hover {
+  transform: scale(1.03);
+}
+
+.visual-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+
+.referencias-section {
+  padding: 60px 20px;
+  background-color: #111;
+  text-align: center;
+}
+
+.referencias-section .swiper {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  color: #eee;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.visual-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #99ff99;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #99ff99;
+  opacity: 1;
+}

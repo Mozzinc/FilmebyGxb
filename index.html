@@ -212,7 +212,113 @@
   
   
 
- 
+<!-- SwiperJS CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<section class="referencias-section">
+  <h2 class="section-title">REFERÊNCIAS VISUAIS</h2>
+
+  <div class="swiper singleRefSwiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1: O Iluminado -->
+      <div class="swiper-slide">
+        <div class="visual-card">
+          <img src="src/img/iluminado.jpg" alt="O Iluminado" />
+          <p><strong>O Iluminado</strong> – Inspiração estética e atmosférica, pelo uso simbólico da luz e isolamento.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2: BK -->
+      <div class="swiper-slide">
+        <div class="visual-card">
+          <img src="src/img/bk.jpg" alt="BK" />
+          <p><strong>BK</strong> – A lírica introspectiva e visual do álbum conecta-se à intensidade emocional dos vídeos.</p>
+        </div>
+      </div>
+
+      <!-- Slide 3: Recayd Mob -->
+      <div class="swiper-slide">
+        <div class="visual-card">
+          <img src="src/img/recayd.jpg" alt="Recayd Mob" />
+          <p><strong>Recayd Mob</strong> – Estética urbana e contemporânea que inspira o estilo alternativo da marca.</p>
+        </div>
+      </div>
+
+      <!-- Slide 4: Milton Nascimento -->
+      <div class="swiper-slide">
+        <div class="visual-card">
+          <img src="src/img/milton.jpg" alt="Milton Nascimento" />
+          <p><strong>Milton Nascimento</strong> – A sensibilidade reflete na busca por narrativas visuais poéticas.</p>
+        </div>
+      </div>
+
+      <!-- Slide 5: Djavan -->
+      <div class="swiper-slide">
+        <div class="visual-card">
+          <img src="src/img/djavan.jpg" alt="Djavan" />
+          <p><strong>Djavan</strong> – A musicalidade e sutileza influenciam o ritmo e tom visual dos filmes de GXB.</p>
+        </div>
+      </div>
+
+      <!-- Slide 6: Mãe -->
+      <div class="swiper-slide">
+        <div class="visual-card">
+          <img src="src/img/mae.jpg" alt="Gabriel e a mãe" />
+          <p><strong>Mãe</strong> – “Mãe é raiz, é onde eu volto quando tudo pesa.”<br>— <em>“Me curar de mim”, BK</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegação -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Paginação opcional -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  if (window.refSwiper && typeof window.refSwiper.destroy === 'function') {
+    window.refSwiper.destroy(true, true);
+  }
+
+  window.refSwiper = new Swiper('.singleRefSwiper', {
+    loop: false,
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        centeredSlides: true
+      },
+      768: {
+        slidesPerView: 1,
+        centeredSlides: true
+      },
+      1024: {
+        slidesPerView: 1,
+        centeredSlides: true
+      }
+    }
+  });
+});
+</script>
+
   
 
 
