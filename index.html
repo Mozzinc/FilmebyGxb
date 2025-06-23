@@ -22,7 +22,7 @@
         <li><a href="#hero" class="i18n" data-pt="Início" data-en="Home">Início</a></li>
         <li><a href="#sobre" class="i18n" data-pt="Sobre" data-en="About">Sobre</a></li>
         <li><a href="#teaser-portfolio" class="i18n" data-pt="Teaser" data-en="Teaser">Teaser</a></li>
-        <li><a href="#final-trigger" class="i18n" data-pt="Último frame" data-en="Final frame">Último frame</a></li>
+        <li><a href="#referencias" class="i18n" data-pt="Referências" data-en="References">Referências</a></li>
         <li><a href="#contato" class="btn-contato i18n" data-pt="Contato" data-en="Contact">Contato</a></li>
       </ul>
 
@@ -160,7 +160,7 @@
   
   
 
-<section class="referencias-section story-frame fade-in">
+<section class="referencias-section story-frame fade-in" id="referencias">
   <h2 class="section-title i18n"
       data-pt="REFERÊNCIAS & INSPIRAÇÕES"
       data-en="REFERENCES & INSPIRATIONS">
@@ -276,12 +276,7 @@ window.addEventListener("beforeunload", () => {
   window.scrollTo(0, 0);
 });
 
-function scrollToSection(id) {
-  const target = document.getElementById(id);
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth" });
-  }
-}
+ 
 
 // Animação de aparição dos itens da linha do tempo
 const timelineItems = document.querySelectorAll(".timeline-list li");
