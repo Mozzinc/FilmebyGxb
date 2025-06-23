@@ -1859,12 +1859,10 @@ h2, .hero-poetry, .teaser-phrase, .contact-title {
 body {
   cursor: url('src/icons/cursor.svg'), auto;
 }
-html {
-  scroll-snap-type: y mandatory;
-}
-section {
-  scroll-snap-align: start;
-}
+
+
+
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
