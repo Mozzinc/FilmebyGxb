@@ -1971,52 +1971,25 @@ section {
   text-align: center;
 }
 
-.referencias-section .swiper {
-  width: 100%;
-  max-width: 500px;
+.referencias-section .section-title {
+  color: #ccffcc;
+  font-size: 28px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.video-wrapper {
+  max-width: 600px;
   margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
 }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.visual-card {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 20px;
-  color: #eee;
-  max-width: 400px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.visual-card img {
+.video-wrapper video {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #99ff99;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 24px;
-}
-
-.swiper-pagination-bullet {
-  background: #ccc;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  background: #99ff99;
-  opacity: 1;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
 }
