@@ -2337,3 +2337,71 @@ body {
     margin-left: auto;
   }
 }
+
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-toggle .bi {
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+
+.dropdown-filter.open .bi {
+  transform: rotate(180deg); /* seta pra cima */
+}
+
+/* Estilo base dos filtros laterais */
+.portfolio-filters .dropdown-filter {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Toggle com seta */
+.portfolio-filters .dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.portfolio-filters .dropdown-toggle i {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Seta gira ao abrir */
+.portfolio-filters .dropdown-filter.open .dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+/* Lista de subfiltros oculta por padrão */
+.subfilter-list {
+  list-style: none;
+  padding-left: 15px;
+  margin-top: 5px;
+  display: none;
+}
+
+/* Mostra ao abrir */
+.dropdown-filter.open .subfilter-list {
+  display: block;
+}
+
+/* Estilo dos itens filhos */
+.subfilter-list li {
+  margin: 6px 0;
+  font-weight: 400;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.subfilter-list li:hover {
+  opacity: 0.7;
+}

@@ -244,3 +244,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown-filter");
+
+  dropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", () => {
+      dropdown.classList.toggle("open");
+
+      // Fecha outros dropdowns abertos
+      dropdowns.forEach(other => {
+        if (other !== dropdown) other.classList.remove("open");
+      });
+    });
+  });
+});

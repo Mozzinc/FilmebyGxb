@@ -185,6 +185,7 @@
         <div class="col-lg-3 filter-sidebar">
           <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
             <ul class="portfolio-filters isotope-filters">
+              
               <!-- Botão principal funcionando -->
               <li data-filter=".momento" class="filter-active i18n" data-pt="Escolha do Momento" data-en="Moment Picks">
                 Escolha do Momento
@@ -192,16 +193,20 @@
               
               <!-- Fotos com subfiltros -->
               <li class="dropdown-filter">
-                <span class="i18n" data-pt="Fotos" data-en="Photos">Fotos</span>
+                <span class="dropdown-toggle i18n" data-pt="Fotos" data-en="Photos">
+                  Fotos <i class="bi bi-chevron-down"></i>
+                </span>
                 <ul class="subfilter-list">
                   <li data-filter=".filter-photos.viagens">Viagens</li>
                   <li data-filter=".filter-photos.skate">Skate</li>
                 </ul>
               </li>
-
+        
               <!-- Vídeos com subfiltros -->
               <li class="dropdown-filter">
-                <span class="i18n" data-pt="Vídeos" data-en="Videos">Vídeos</span>
+                <span class="dropdown-toggle i18n" data-pt="Vídeos" data-en="Videos">
+                  Vídeos <i class="bi bi-chevron-down"></i>
+                </span>
                 <ul class="subfilter-list">
                   <li data-filter=".filter-videos.viagens">Viagens</li>
                   <li data-filter=".filter-videos.after">After</li>
@@ -211,6 +216,7 @@
                   <li data-filter=".filter-videos.tattoos">Tattoos</li>
                 </ul>
               </li>
+        
             </ul>
           </div>
         </div>
