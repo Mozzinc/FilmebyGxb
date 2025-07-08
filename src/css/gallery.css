@@ -2604,3 +2604,57 @@ color: #111;
 body {
   padding-top: 100px; /* Ajuste se seu novo header for mais alto ou mais baixo */
 }
+
+/* --- Mobile Responsiveness for Gallery --- */
+@media (max-width: 768px) {
+  .portfolio .filter-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .filters-wrapper {
+    display: block;
+    background-color: #111;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .portfolio-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .portfolio-filters > li,
+  .portfolio-filters .dropdown-filter > span {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .subfilter-list {
+    margin-left: 10px;
+    margin-top: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .dropdown-filter.open .subfilter-list {
+    display: flex;
+  }
+
+  .portfolio-container .portfolio-item {
+    width: 100% !important;
+  }
+
+  .portfolio-container .portfolio-item video,
+  .portfolio-container .portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
