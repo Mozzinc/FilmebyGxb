@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>filmebyGXB</title>
   <link rel="stylesheet" href="src/css/style.css" />
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="src/css/gallery.css" rel="stylesheet">
+  <link href="src/css/style.css" rel="stylesheet">
+
+ 
 </head>
 <body>
   <header class="site-header">
@@ -19,12 +39,16 @@
       </button>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero" class="i18n" data-pt="Início" data-en="Home">Início</a></li>
-        <li><a href="#sobre" class="i18n" data-pt="Sobre" data-en="About">Sobre</a></li>
-        <li><a href="#teaser-portfolio" class="i18n" data-pt="Teaser" data-en="Teaser">Teaser</a></li>
-        <li><a href="#referencias" class="i18n" data-pt="Referências" data-en="References">Referências</a></li>
-        <li><a href="#contato" class="btn-contato i18n" data-pt="Contato" data-en="Contact">Contato</a></li>
-      </ul>
+  <li><a href="#hero" class="i18n" data-pt="Início" data-en="Home">Início</a></li>
+  <li><a href="#sobre" class="i18n" data-pt="Sobre" data-en="About">Sobre</a></li>
+  <li><a href="#teaser-portfolio" class="i18n" data-pt="Teaser" data-en="Teaser">Teaser</a></li>
+
+  <!-- NOVO BOTÃO GALERIA -->
+  <li><a href="#portfolio" class="i18n" data-pt="Galeria" data-en="Gallery">Galeria</a></li>
+
+  <li><a href="#referencias" class="i18n" data-pt="Referências" data-en="References">Referências</a></li>
+  <li><a href="#contato" class="btn-contato i18n" data-pt="Contato" data-en="Contact">Contato</a></li>
+</ul>
 
       <div class="social-icons">
         <button id="lang-toggle" class="lang-btn" aria-label="Trocar idioma">EN</button>
@@ -37,98 +61,86 @@
   
       
 
- <!-- HERO -->
-<section class="hero story-frame" id="hero">
-  <div class="hero-grid">
-    <div class="hero-background-texts">
-      <span class="bg-text i18n" style="top: 12%; left: 8%;" data-pt="intensidade" data-en="intensity">intensidade</span>
-      <span class="bg-text i18n" style="top: 28%; right: 10%;" data-pt="detalhe" data-en="detail">detalhe</span>
-      <span class="bg-text i18n" style="bottom: 15%; left: 20%;" data-pt="textura" data-en="texture">textura</span>
-      <span class="bg-text i18n" style="top: 55%; left: 50%;" data-pt="tempo" data-en="time">tempo</span>
-      <span class="bg-text i18n" style="bottom: 12%; right: 15%;" data-pt="real" data-en="real">real</span>
-      <span class="bg-text i18n" style="top: 40%; left: 10%;" data-pt="retrô" data-en="retro">retrô</span>
-      <span class="bg-text i18n" style="bottom: 30%; right: 25%;" data-pt="memória" data-en="memory">memória</span>
-      <span class="bg-text i18n" style="top: 70%; left: 60%;" data-pt="cena" data-en="scene">cena</span>
-      <span class="bg-text i18n" style="top: 20%; left: 35%;" data-pt="sentir" data-en="feel">sentir</span>
-      <span class="bg-text i18n" style="bottom: 25%; left: 45%;" data-pt="luz" data-en="light">luz</span>
-    </div>
+<section class="hero" id="hero">
+  <div class="hero-grid animate-hero">
 
-    <!-- LADO ESQUERDO -->
     <div class="hero-left">
       <h1 class="hero-name">
-        filmeby <span class="hero-gxb">GXB</span>
+        FilmeBy <span class="hero-gxb">GXB</span>
       </h1>
 
-      <p class="hero-dynamic i18n" id="hero-dynamic" data-pt="direção & vídeo" data-en="direction & video">direção & vídeo</p>
+      <p class="hero-poetry i18n"
+         data-pt="Vídeos que elevam o seu negócio."
+         data-en="Videos that elevate your brand.">
+         Vídeos que elevam o seu negócio.
+      </p>
 
-      <div class="hero-socials">
-        <a href="https://instagram.com/filmebygxb" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/55XXXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:contatogabriel@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
+      <p class="hero-line i18n"
+         data-pt="Direção, captação e edição com estética e resultado."
+         data-en="Direction, capture and editing with aesthetics and results.">
+         Direção, captação e edição com estética e resultado.
+      </p>
+
+      <a href="#portfolio"
+         class="hero-cta i18n"
+         data-pt="Ver Portfólio"
+         data-en="See Gallery">
+         Ver Galeria
+      </a>
     </div>
 
-    <!-- LADO DIREITO -->
     <div class="hero-right">
-      <p class="hero-poetry i18n" data-pt="Histórias reais, sentimentos eternos." data-en="Real stories, eternal feelings.">Histórias reais, sentimentos eternos.</p>
-      <p class="hero-line i18n" data-pt="GXB transforma momentos em filmes com alma — recortes sinceros, estéticos e sem pose." data-en="GXB turns moments into soulful films — sincere, aesthetic and unposed frames.">GXB transforma momentos em filmes com alma — recortes sinceros, estéticos e sem pose.</p>
-      <p class="hero-line i18n" data-pt="Entre ruídos analógicos e beats internos, ele cria narrativas visuais que batem onde faz sentido." data-en="Between analog noise and inner beats, he crafts visual stories that hit where they matter.">Entre ruídos analógicos e beats internos, ele cria narrativas visuais que batem onde faz sentido.</p>
-      <p class="hero-line i18n" data-pt="É sobre sentimento. É sobre deixar algo." data-en="It's about feeling. It's about leaving something behind.">É sobre sentimento. É sobre deixar algo.</p>
-      <button class="hero-cta i18n" onclick="scrollToSection('sobre')" data-pt="Conheça a fundo o GXB" data-en="Get to know GXB">Conheça a fundo o GXB</button>
+      <img src="src/img/gabriel-hero.jpg" alt="Gabriel Souza" style="max-width: 100%; border-radius: 12px;">
     </div>
+
   </div>
 
-  <!-- Scroll -->
-  <button class="scroll-down" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })">↓</button>
+  <button class="scroll-down" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })">
+    ↓
+  </button>
 </section>
 
 
 
 
 <!-- SOBRE -->
-<section class="about fade-in story-frame" id="sobre">
+<section class="about" id="sobre">
   <div class="about-content">
-    
-    <div class="about-text">
-      <h2 class="i18n" data-pt="sobre gabriel" data-en="about gabriel">sobre gabriel</h2>
-      <p class="about-block i18n" data-pt="21 anos, de Marília - SP" data-en="21 years old, from Marília - SP">21 anos, de Marília - SP</p>
-      <p class="about-block i18n" data-pt="fotógrafo, videomaker, editor" data-en="photographer, filmmaker, editor">fotógrafo, videomaker, editor</p>
-      <p class="about-block i18n" 
-         data-pt="apaixonado por <span class='highlight'>filmes</span>, <span class='highlight'>séries</span> e <span class='highlight'>rap brasileiro</span>" 
-         data-en="passionate about <span class='highlight'>films</span>, <span class='highlight'>series</span> and <span class='highlight'>Brazilian rap</span>">
-        apaixonado por <span class="highlight">filmes</span>, <span class="highlight">séries</span> e <span class="highlight">rap brasileiro</span>
-      </p>
-      <p class="about-block i18n" 
-         data-pt="inspirado por <span class='highlight'>Djavan</span>, <span class='highlight'>Milton</span> e o alternativo" 
-         data-en="inspired by <span class='highlight'>Djavan</span>, <span class='highlight'>Milton</span> and the alternative">
-        inspirado por <span class="highlight">Djavan</span>, <span class="highlight">Milton</span> e o alternativo
-      </p>
-      <p class="about-signature i18n" 
-         data-pt="filmado, dirigido, editado e sonhado por <strong>gab souza</strong>" 
-         data-en="filmed, directed, edited and dreamed by <strong>gab souza</strong>">
-        filmado, dirigido, editado e sonhado por <strong>gab souza</strong>
-      </p>
-    </div>
 
-    <div class="about-next">
-      <button class="about-btn i18n" 
-              onclick="scrollToSection('teaser-portfolio')" 
-              data-pt="ver teaser ↓" 
-              data-en="see teaser ↓">
-        ver teaser ↓
-      </button>
+    <div class="about-text">
+      <h2 class="section-title i18n"
+          data-pt="Por trás das lentes"
+          data-en="Behind the lenses">
+        Por trás das lentes
+      </h2>
+
+      <p class="about-block i18n"
+         data-pt="GXB é direção, ritmo e estética. Filmes pensados para impactar — com olhar autoral, estética contemporânea e narrativa de resultado."
+         data-en="GXB is direction, rhythm and aesthetics. Films crafted to make an impact — with an artistic eye, contemporary style and narrative that delivers.">
+         GXB é direção, ritmo e estética. Filmes pensados para impactar — com olhar autoral, estética contemporânea e narrativa de resultado.
+      </p>
+
+      <p class="about-block i18n"
+         data-pt="• Direção de projetos visuais com DNA comercial<br>• Estilo retrô-moderno, textura e luz como assinatura<br>• Envolvimento do briefing ao corte final"
+         data-en="• Direction of visual projects with commercial DNA<br>• Retro-modern style, signature textures and lighting<br>• Involvement from briefing to final cut">
+         • Direção de projetos visuais com DNA comercial<br>
+         • Estilo retrô-moderno, textura e luz como assinatura<br>
+         • Envolvimento do briefing ao corte final
+      </p>
+
+      <p class="about-signature i18n"
+         data-pt="Transformando ideias em imagens com verdade e propósito."
+         data-en="Turning ideas into images with truth and purpose.">
+         Transformando ideias em imagens com verdade e propósito.
+      </p>
     </div>
 
     <div class="about-image">
-      <video autoplay muted loop playsinline preload="auto" class="about-video">
-        <source src="midia/gab.mp4" type="video/mp4" />
-        Seu navegador não suporta vídeo.
-      </video>
+      <img src="src/img/gxb-sobre.jpg" alt="GXB em ação">
     </div>
-    
+
   </div>
 </section>
-
 
 
 
@@ -146,13 +158,180 @@
         data-en="The feeling is in the details.">
       O sentimento está nos detalhes.
     </h2>
-    <a href="https://linktr.ee/filmebygxb" 
+    <a href="#portfolio"
        target="_blank" 
        class="teaser-btn i18n" 
        data-pt="Veja mais histórias →" 
        data-en="See more stories →">
       Veja mais histórias →
     </a>
+  </div>
+</section>
+
+
+
+<!-- GALERIA COMPLETA COM NOVOS FILTROS E PROJETOS -->
+<section id="portfolio" class="portfolio section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2 class="i18n" data-pt="Galeria" data-en="Gallery">Galeria</h2>
+    <p class="i18n" data-pt="Um pouco da arte que fazemos" data-en="A glimpse of our art">
+      Um pouco da arte que fazemos
+    </p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="isotope-layout" data-default-filter=".momento" data-layout="masonry" data-sort="original-order">
+      <div class="row">
+        
+        <!-- Filtros laterais -->
+        <div class="col-lg-3 filter-sidebar">
+          <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
+            <ul class="portfolio-filters isotope-filters">
+              <!-- Botão principal funcionando -->
+              <li data-filter=".momento" class="filter-active i18n" data-pt="Escolha do Momento" data-en="Moment Picks">
+                Escolha do Momento
+              </li>
+              
+              <!-- Fotos com subfiltros -->
+              <li class="dropdown-filter">
+                <span class="i18n" data-pt="Fotos" data-en="Photos">Fotos</span>
+                <ul class="subfilter-list">
+                  <li data-filter=".filter-photos.viagens">Viagens</li>
+                  <li data-filter=".filter-photos.skate">Skate</li>
+                </ul>
+              </li>
+
+              <!-- Vídeos com subfiltros -->
+              <li class="dropdown-filter">
+                <span class="i18n" data-pt="Vídeos" data-en="Videos">Vídeos</span>
+                <ul class="subfilter-list">
+                  <li data-filter=".filter-videos.viagens">Viagens</li>
+                  <li data-filter=".filter-videos.after">After</li>
+                  <li data-filter=".filter-videos.casamento">Casamento</li>
+                  <li data-filter=".filter-videos.expo">Expo</li>
+                  <li data-filter=".filter-videos.comidas">Comidas</li>
+                  <li data-filter=".filter-videos.tattoos">Tattoos</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Conteúdo da galeria -->
+        <div class="col-lg-9">
+          <div class="row gy-4 portfolio-container isotope-container">
+            
+            <!-- ESCOLHA DO MOMENTO -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item momento">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/j1.jpg" class="img-fluid" alt="j1" loading="lazy">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item momento">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/j2.jpg" class="img-fluid" alt="j2" loading="lazy">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item momento">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/j3.jpg" class="img-fluid" alt="j3" loading="lazy">
+              </div>
+            </div>
+
+            <!-- FOTOS - VIAGENS -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-photos viagens">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/j4.jpg" class="img-fluid" alt="j4" loading="lazy">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-photos viagens">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/j5.jpg" class="img-fluid" alt="j5" loading="lazy">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-photos viagens">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/j6.jpg" class="img-fluid" alt="j6" loading="lazy">
+              </div>
+            </div>
+
+            <!-- FOTOS - SKATE -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-photos skate">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/skt1.jpg" class="img-fluid" alt="skt1" loading="lazy">
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-photos skate">
+              <div class="portfolio-wrap">
+                <img src="src/galleryMedia/photos/skt2.jpg" class="img-fluid" alt="skt2" loading="lazy">
+              </div>
+            </div>
+
+            <!-- VÍDEOS - VIAGENS -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos viagens">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/j9.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos viagens">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/jalapao.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- VÍDEO - AFTER -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos after">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/after.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- VÍDEO - CASAMENTO -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos casamento">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/casamento.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- VÍDEO - COMIDAS -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos comidas">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/pizza.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- VÍDEO - EXPO -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos expo">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/expo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- VÍDEO - TATTOOS -->
+            <div class="col-sm-6 col-md-4 portfolio-item isotope-item filter-videos tattoos">
+              <div class="portfolio-wrap">
+                <video class="img-fluid" autoplay muted loop playsinline>
+                  <source src="src/galleryMedia/videos/tattoo.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          </div> <!-- Fim portfolio-container -->
+        </div> <!-- Fim col-lg-9 -->
+      </div>
+    </div>
   </div>
 </section>
   
@@ -405,8 +584,117 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     </script>
+
+
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="src/js/gallery.js"></script>
+
+
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const langToggle = document.getElementById('lang-toggle');
+    if (!langToggle) return;
+
+    let currentLang = document.documentElement.getAttribute('lang') || 'pt';
+    langToggle.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+
+    langToggle.addEventListener('click', () => {
+      const nextLang = currentLang === 'pt' ? 'en' : 'pt';
+      currentLang = nextLang;
+      document.documentElement.setAttribute('lang', nextLang);
+      langToggle.textContent = nextLang === 'pt' ? 'EN' : 'PT';
+
+      const elements = document.querySelectorAll('.i18n');
+      elements.forEach(el => {
+        const newText = el.getAttribute(`data-${nextLang}`);
+        if (newText) el.innerHTML = newText;
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    toggleBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      toggleBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (navMenu.classList.contains("show")) {
+          navMenu.classList.remove("show");
+          toggleBtn.textContent = "☰";
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  AOS.init({
+    once: true, // executa só uma vez
+    duration: 800 // suavidade da transição
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Inicia Isotope
+    const grid = document.querySelector('.portfolio-container');
+    if (!grid) return;
+
+    const iso = new Isotope(grid, {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'masonry'
+    });
+    iso.arrange({ filter: '.momento' });
+
+    // Filtros principais e subfiltros
+    const filterItems = document.querySelectorAll('.portfolio-filters li[data-filter]');
+    filterItems.forEach(filter => {
+      filter.addEventListener('click', function (e) {
+        e.stopPropagation(); // Evita abrir/fechar dropdown por acidente
+
+        // Remove classe ativa de todos
+        document.querySelectorAll('.portfolio-filters li').forEach(el => el.classList.remove('filter-active'));
+
+        // Adiciona à clicada
+        this.classList.add('filter-active');
+
+        // 🔧 CORREÇÃO AQUI:
+        const filterValue = this.getAttribute('data-filter');
+        iso.arrange({ filter: filterValue.toString() }); // <- use isso
+      });
+    });
+
+    // Toggle de dropdowns
+    const dropdowns = document.querySelectorAll(".dropdown-filter > span");
+    dropdowns.forEach(toggle => {
+      toggle.addEventListener("click", function () {
+        const parent = this.parentElement;
+        parent.classList.toggle("open");
+      });
+    });
+  });
+</script>
+
   
-  
+
   
     
 </body>

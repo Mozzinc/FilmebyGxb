@@ -2,7 +2,9 @@
   
 
   /* hero */
-
+body {
+  padding-top: 80px; /* Ajuste se seu novo header for mais alto ou mais baixo */
+}
 
   body {
     margin: 0;
@@ -114,37 +116,31 @@
   .hero-poetry {
     font-size: 1.6rem;
     color: #e0e0e0;
-    font-weight: 300;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
   }
   
   .hero-line {
     font-size: 1rem;
-    color: #ccc;
+    color: #c8c8c8;
     margin-bottom: 1rem;
-    line-height: 1.6;
   }
   
-  
   .hero-cta {
-    margin-top: 1rem;
+    margin-top: 1.2rem;
     padding: 12px 28px;
     background-color: transparent;
-    color: #9b78d0;
-    border: 1px solid #9b78d0;
+    color: #8FA36F;
+    border: 2px solid #8FA36F;
     border-radius: 40px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
   }
-  
   .hero-cta:hover {
-    background-color: #9b78d0;
+    background-color: #8FA36F;
     color: #111;
-    transform: scale(1.05);
-    box-shadow: 0 0 12px rgba(155, 120, 208, 0.4);
   }
   
   
@@ -1991,3 +1987,258 @@ body {
   object-fit: cover;
   border-radius: 12px;
 }
+
+.gxb-portfolio {
+  background-color: #0e0e0e;
+  color: #eee;
+  padding: 100px 2rem;
+  text-align: center;
+}
+
+.portfolio-theme {
+  margin-bottom: 4rem;
+}
+
+.portfolio-theme-title {
+  font-size: 1.5rem;
+  color: #9b78d0;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.03);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(12%) contrast(110%);
+  transition: filter 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  filter: none;
+}
+
+.tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(143, 163, 111, 0.85);
+  color: #111;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #bbb;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+  color: #8FA36F;
+}
+
+.like-btn.liked {
+  color: #f66;
+}
+
+.like-count {
+  min-width: 18px;
+  text-align: center;
+}
+
+
+
+
+/* Filtro principal */
+.portfolio-filters {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-filters li {
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+}
+
+.portfolio-filters li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Dropdown */
+.dropdown-filter {
+  position: relative;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: default;
+}
+
+.dropdown-filter > span {
+  display: block;
+  padding: 8px 12px;
+}
+
+.subfilter-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 16px;
+}
+
+.subfilter-list li {
+  font-weight: normal;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: background 0.3s ease;
+}
+
+.subfilter-list li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Ativo */
+.portfolio-filters .filter-active {
+  background-color: #8FA36F;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Dropdown lateral */
+.dropdown-filter {
+  cursor: pointer;
+  position: relative;
+}
+
+.subfilter-list {
+  display: none;
+  list-style: none;
+  padding-left: 16px;
+  margin: 4px 0;
+}
+
+.dropdown-filter.open .subfilter-list {
+  display: block;
+}
+
+.subfilter-list li {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.subfilter-list li:hover {
+  color: #fff;
+}
+
+
+/* Dropdown escondido por padrão */
+.subfilter-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding-left: 1rem;
+}
+
+/* Quando ativado */
+.subfilter-list.show {
+  max-height: 200px; /* Ajuste conforme o conteúdo */
+}
+
+/* Cursor e estilo opcional */
+.dropdown-filter span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+
+/* Subfiltros inicialmente escondidos */
+/* Esconde os subfiltros por padrão */
+.subfilter-list {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 1rem;
+  transition: max-height 0.4s ease;
+  list-style: none;
+  margin: 0;
+}
+
+/* Mostra quando aberto */
+.dropdown-filter.open .subfilter-list {
+  max-height: 300px;
+}
+
+/* Estilo de item ativo */
+.portfolio-filters li.filter-active {
+  font-weight: bold;
+  color: #8FA36F;
+}
+
+/* Subitens clicáveis */
+.dropdown-filter span {
+  cursor: pointer;
+}
+
+
+/* Tamanho padrão para fotos e vídeos */
+.portfolio-wrap img,
+.portfolio-wrap video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 4/5; /* levemente vertical, ideal para retrato */
+  max-height: 420px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Espaçamento geral dos cards */
+.portfolio-item {
+  padding: 0 10px;
+}
+
+/* Grid responsivo com colunas mais estreitas */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
