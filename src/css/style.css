@@ -2318,3 +2318,22 @@ body {
   z-index: 1000;
   margin-top: 2.5rem; /* 👈 AJUSTE IMPORTANTE */
 }
+
+
+/* Esconde o botão hamburguer no desktop */
+#mobileMenuToggle {
+  display: none;
+}
+
+/* Exibe somente no mobile */
+@media (max-width: 991px) {
+  #mobileMenuToggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
